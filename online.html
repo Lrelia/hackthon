@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+    <div class="wrapper"></div>
+    <div class="container">
+        <div class="dialog-wrap">
+            <div class="friend">
+                <div class="list-banner">
+                    <img class="online-portrait" src="img/head.jpg" alt="用户头像" />
+                    <div class="name">小仪</div>
+                </div>  <!--list-banner-->
+                <div class="search">
+                    <input type="text" class='input-text' placeholder='搜索联系人'/>
+                </div>  <!--search-->
+                <div class="btn-wrap"> 
+                    <a href='###' data-dir="#conversation" data-img="#con-img" class='friend-btn btn-gap friend-btn-active'><img src="img/conversation-on.png" id='con-img' alt="对话" data-img='img/conversation.png' data-onimg='img/conversation-on.png'/></a>
+                    <a href='###' data-dir="#people" data-img="#peo-img" class='friend-btn'><img src="img/people.png" id='peo-img' alt="联系人" data-img='img/people.png' data-onimg='img/people-on.png' /></a>
+                    <a href='###' data-dir="#group" data-img='#group-img' class='friend-btn'><img src="img/group.png" id='group-img' alt="群" data-img='img/group.png' data-onimg='img/group-on.png' /></a>
+                </div>  <!--btn-wrap-->
+                <div class="board">
+                    <div id="conversation">
+                        <ul class="board-list-conversation">
+                            <li class='board-gap'></li>
+                            <li>
+                                <img class="head-img" src="img/head.jpg" alt="">
+                                <div class="member">小猫</div>
+                                <div class="outdate-message">xhfdsafdasfdsfdsa</div>
+                                <a href="###" class='close'><img src="img/xx.png" alt=""></a>
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>  <!--coversation-->
+                    <div id="people">
+                        <ul class="board-list-member">
+                            <li class='board-gap'></li>
+                            <li>
+                                <img class="head-img" src="img/head.jpg" alt="联系人头像" />
+                                <div class="member">bbbbbbbbbbbbbbb</div>
+                            </li>
+                            <li></li>
+                        </ul>
+                    </div>  <!--people-->
+                    <div id="group">
+                        no
+                    </div>  <!--group-->
+                </div>  <!--board-->
+                <a class="config" href="#menu" data-menu="#menu"><img src="img/config.png" alt="设置" data-img='img/config.png' data-onimg='img/config-on.png' /></a>
+                <ul id="menu">
+                    <li><img src="img/note.png" alt="" /><a href='###'>桌面通知</a></li>
+                    <li><img src="img/exit.png" alt="" /><a href='###'>退出</a></li>
+                </ul>
+            </div>  <!--friend-->
+            <div class="dialog">
+                <div class="dialog-banner">
+                    <a href="###" class='exit'><img src="img/x.png" alt="" /></a>
+                    <div class="dialog-name">小小</div>
+                </div>  <!--dialog-banner-->
+                <div class="dialog-message">
+                    <div class="check-gap"></div>
+                    <button class="check-more">查看更多</button>
+                    <div class="wordWrap">
+                        <div class="hisWord">
+                            <img class="hisHead" src="img/head.jpg" alt="">
+                            <div class="heSay">玛</div>
+                        </div>
+                    </div>  <!--wordWrap-->
+                    <div class="wordWrap">
+                        <div class="myWord">
+                            <img class="myHead" src="img/head.jpg" alt="">
+                            <div class="ISay">好想喝牛奶</div>
+                        </div>
+                    </div>  <!--wordWrap-->
+                    <div class="time">12:20</div>
+                    <div class="wordWrap">
+                        <div class="hisWord">
+                            <img class="hisHead" src="img/head.jpg" alt="">
+                            <div class="heSay">玛丽玛丽哄</div>
+                        </div>
+                    </div>  <!--wordWrap-->
+                    <div class="wordWrap">
+                        <div class="myWord">
+                            <img class="myHead" src="img/head.jpg" alt="">
+                            <div class="ISay">好想喝牛奶</div>
+                        </div>
+                    </div>  <!--wordWrap-->
+                    <div class="wordWrap">
+                        <div class="hisWord">
+                            <img class="hisHead" src="img/head.jpg" alt="">
+                            <div class="heSay">玛丽玛丽哄</div>
+                        </div>
+                    </div>  <!--wordWrap-->
+                    <div class="wordWrap">
+                        <div class="myWord">
+                            <img class="myHead" src="img/head.jpg" alt="">
+                            <div class="ISay">好想喝牛奶</div>
+                        </div>
+                    </div>  <!--wordWrap-->
+
+                </div>  <!--dialog-message-->
+                <div class="dialog-function">
+                    <a href="###" class='sendfile'><img src="img/sendfile.png" alt="" /></a>
+                </div>  <!--dialog-function-->
+                <textarea id="" name="" cols="30" rows="10" class='dialog-enter'></textarea>
+                <button class="dialog-send">发送</button>
+            </div> <!--dialog-->
+        </div>  <!--dialog-wrap-->
+    </div>  <!--container-->
+    <script src='jquery-2.0.3.min.js'></script>
+    <script src='home.js'></script>
+</body>
+</html>

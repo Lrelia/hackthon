@@ -1,0 +1,539 @@
+/*
+ *
+ *  YMC shorted for YoumiChart: 有米内部通讯工具
+ *
+ *  2014 @ www.youmi.net
+ *
+ *  Group Member: 李斌斌 卢紫庭 朱嘉俊 吴蔼仪
+ *
+ */
+
+
+
+/*
+ * =resetCSS 重置CSS 
+ */
+html, body {
+    width       : 100%;
+    min-width   : 1000px;
+    height      : 100%;
+    min-height  : 900px;
+    margin      : 0;
+    padding     : 0;
+    font-family : "微软雅黑";
+}
+label {
+    cursor: pointer;
+}
+ul {
+    margin      : 0;
+    padding     : 0;
+    list-style  : none;
+}
+a {
+    text-decoration : none;
+}
+button {
+    border  : 0;
+    outline : none;
+    cursor  : pointer;
+}
+input[type=checkbox] {
+    margin  : 0;
+}
+/* =placeholder */
+::-webkit-input-placeholder {
+    color       : #98a5c0;
+    font-size   : 14px;
+}
+input:-moz-placebolder {
+    color       : #98a5c0;
+    font-size   : 14px;
+}
+/* =scrollbar */
+::-webkit-scrollbar-track-piece {
+    display     : none;
+}
+::-webkit-scrollbar {
+    width   : 7px;
+    height  : 100%;
+}
+::-webkit-scrollbar-thumb {
+    background       : padding-box;
+    border           : 1px solid #55545f;
+    border-radius    : 3px;
+    min-height       : 28px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color : #929292;
+}
+.container {
+    width       : 100%;
+    height      : 100%;
+    background  : #bab6ee;
+    background  : -webkit-radial-gradient(center, ellipse cover, #bab6ee 30%, #8d7bca 60%, #3c539c 100%);
+    background  :    -moz-radial-gradient(center, ellipse cover, #bab6ee 30%, #8d7bca 60%, #3c539c 100%);
+}
+
+
+/*
+ * =entry YMC登录框
+ */
+.entry {
+    position                : absolute;
+    width                   : 400px;
+    height                  : 290px;
+    left                    : 50%;
+    top                     : 50%;
+    margin                  : -185px 0 0 -200px;
+    background              : #fff;
+    border                  : 1px solid #123456;
+    -webkit-border-radius   : 3px;
+       -moz-border-radius   : 3px;
+            border-radius   : 3px;
+}
+.banner {
+    width           : 100%;
+    height          : 40px;
+    background      : #123456;
+    color           : #7d88a4;
+    font-size       : 17px;
+    font-weight     : normal;
+    text-align      : center;
+    line-height     : 40px;
+    vertical-align  : middle;
+}
+.portrait {
+    position    : absolute;
+    width       : 80px;
+    height      : 80px;
+    left        : 50px;
+    top         : 86px;
+    background  : #123456;
+}
+.wrap {
+    position            : absolute;
+    top                 : 80px;
+    left                : 152px;
+    color               : #737d97;
+    font-size           : 12px;
+    -webkit-text-shadow : 0 0 1px 0 #737d97;
+       -moz-text-shadow : 0 0 1px 0 #737d97;
+            text-shadow : 0 0 1px 0 #737d97;
+}
+.inputText {
+    width           : 198px;
+    height          : 30px;
+    margin-top      : 6px;
+    font-size       : 14px;
+    text-indent     : 30px;
+    background      : #f4f4f4;
+    border          : 1px solid #9bbbda;
+}
+.account {
+    background      : url(img/account.png) no-repeat;
+    background-size : 30px 30px;
+}
+.password {
+    background : url(img/password.png) no-repeat;
+}
+.check-box-line {
+    position    : relative;
+    width       : 240px;
+    height      : 20px;
+    margin-top  : 6px;
+    vertical-align : middle;
+}
+.rePassword {
+    position : absolute;
+    top      : 3px;
+}
+.rePL {
+    position : absolute;
+    left     : 14px;
+    top      : 0;
+}
+.autoEnter {
+    position : absolute;
+    left     : 73px;
+    top      : 3px;
+}
+.reAE {
+    position : absolute;
+    left     : 87px;
+    top      : 0;
+}
+.btnEntry {
+    position                : absolute;
+    width                   : 302px;
+    height                  : 40px;
+    bottom                  : 32px;
+    left                    : 50px;
+    background              : #1ea7ed;
+    color                   : #fff;
+    font-size               : 20px;
+    border                  : 1px solid #1392d3;
+    outline                 : none;
+    -webkit-border-radius   : 2px;
+       -moz-border-radius   : 2px;
+            border-radius   : 2px;
+}
+.btnEntry:active {
+    background : #1392d3;
+}
+
+/*
+ * =online YMC线上
+ */
+.wrapper {
+    position : absolute;
+    width    : 100%;
+    height   : 100%;
+    display  : none;
+    z-index  : 2;
+}
+.dialog-wrap {
+    position                : absolute;
+    width                   : 863px;
+    height                  : 700px;
+    left                    : 50%;
+    top                     : 50%;
+    margin                  : -380px 0 0 -430px;
+}
+.list-banner {
+    position    : relative;
+    width       : 100%;
+    height      : 40px;
+    background  : #2e3749;
+}
+.online-portrait {
+    position        : absolute;
+    left            : -1px;
+    bottom          : 0;
+    width           : 76px;
+    height          : 76px;
+    background      : #273040;
+    border-radius   : 3px;
+}
+.name {
+    float           : left;
+    margin-left     : 90px;
+    color           : #78829d;
+    font-size       : 18px;
+    line-height     : 40px;
+    vertical-align  : middle;
+}
+.friend {
+    width                       : 225px;
+    height                      : 100%;
+    background                  : #19202e;
+    border                      : 1px solid #273040;
+    float                       : left;
+    border-top-left-radius      : 3px;
+    border-bottom-left-radius   : 3px;
+}
+.search {
+    width           : 100%;
+    height          : 56px;
+    text-align      : center;
+    line-height     : 56px;
+    vertical-align  : middle;
+}
+.input-text {
+    width                   : 180px;
+    height                  : 18px;
+    text-indent             : 16px;
+    border                  : 1px solid #141e28;
+    outline                 : none;
+    -webkit-border-radius   : 10px;
+       -moz-border-radius   : 10px;
+            border-radius   : 10px;
+}
+.btn-wrap {
+    width   : 100%;
+    height  : 44px;
+    border-bottom  : 1px solid #273042;
+}
+.btn-gap {
+    margin-left : 10px;
+}
+.friend-btn {
+    padding     : 10px 20px 10px 20px;
+    text-align  : center;
+    float       : left;
+}
+.friend-btn-active {
+    background              : #1f2637;
+    border-left             : 1px solid #273042;
+    border-right            : 1px solid #273042;
+    border-top              : 1px solid #273042;
+    border-bottom           : 1px solid #1f2637;
+    border-top-left-radius  : 4px;
+    border-top-right-radius : 4px;
+}
+.board {
+    position        : relative;
+    width           : 100%;
+    height          : 516px;
+    background      : #1f2637;
+    overflow-y      : auto;
+    overflow-x      : hidden;
+    border-bottom   : 1px solid #282f41;
+}
+.board-list-conversation li {
+    position        : relative;
+    width           : 100%;
+    height          : 54px;
+    border-bottom   : 1px solid #161d29;
+    cursor          : pointer;
+}
+.board-list-member li {
+    position        : relative;
+    width           : 100%;
+    height          : 60px;
+    border-bottom   : 1px solid #161d29;
+    cursor          : pointer;
+}
+.board-list-member li:hover {
+    background  : #292d3c;
+}
+.item-active {
+    background  : #eef2f8;
+}
+.board-list-conversation li.board-gap, .board-list-member li.board-gap {
+    height      : 0;
+    margin-top  : 10px;
+    border      : 0;
+}
+.head-img {
+    position        : absolute;
+    left            : 20px;
+    top             : 5px;
+    width           : 44px;
+    height          : 44px;
+    border-radius   : 3px;
+}
+.member {
+    position    : absolute;
+    left        : 80px;
+    top         : 2px;
+    max-width   : 100px;
+    font-size   : 14px;
+    color       : #7d88a4;
+    overflow    : hidden;
+}
+.outdate-message {
+    position    : absolute;
+    left        : 80px;
+    max-width   : 100px;
+    bottom      : 7px;
+    font-size   : 12px;
+    color       : #7d88a4;
+    overflow    : hidden;
+}
+.close {
+    position    : absolute;
+    top         : -2px;
+    right       : 8px;
+    color       : #077ab5;
+}
+#conversation {
+    position    : absolute;
+    width       : 100%;
+}
+#people {
+    position    : absolute;
+    width       : 100%;
+    display     : none;
+}
+#group {
+    position    : absolute;
+    width       : 100%;
+    display     : none;
+}
+.config {
+    position : absolute;
+    left     : 10px;
+    bottom   : 8px;
+    cursor   : pointer;
+}
+#menu {
+    position        : absolute;
+    left            : 34px;
+    bottom          : 24px;
+    border-top      : 1px solid #1b202f;
+    border-right    : 1px solid #1b202f;
+    border-left     : 1px solid #1b202f;
+    display         : none;
+    z-index         : 40;
+}
+#menu li {
+    width           : 160px;
+    height          : 40px;
+    background      : #2f364a;
+    color           : #6a7481;
+    border-bottom   : 1px solid #1b202f;
+    cursor          : pointer;
+}
+#menu img {
+    float   : left;
+    margin  : 9px 0 0 18px;
+}
+#menu a {
+    float   : left;
+    margin  : 6px 0 0 10px;
+    color           : #6a7481;
+}
+
+
+.dialog {
+    width                       : 635px;
+    height                      : 100%;
+    background                  : #dde0e6;
+    border-top                  : 1px solid #273040;
+    border-right                : 1px solid #273040;
+    border-bottom               : 1px solid #273040;
+    border-top-right-radius     : 3px;
+    border-bottom-right-radius  : 3px;
+    float                       : left;
+    display                     : none;
+}
+.dialog-banner {
+    width       : 100%;
+    height      : 40px;
+    background  : #dde1e7;
+}
+.dialog-name {
+    font-size       : 14px;
+    color           : #737d97;
+    text-align      : center;
+    line-height     : 40px;
+    vertical-align  : middle;
+}
+.exit {
+    margin  : 10px 12px 0 0;
+    float   : right;
+}
+.dialog-message {
+    width       : 100%;
+    height      : 440px;
+    background  : #eef2f8;
+    overflow-y  : auto;
+}
+.check-gap {
+    height : 6px;
+}
+.check-more {
+    width           : 80px;
+    margin          : 0 auto;
+    background      : #baccde;
+    color           : #eef2f9;
+    font-size       : 12px;
+    text-align      : center;
+    border-radius   : 12px;
+    display         : block;
+}
+.wordWrap {
+    position    : relative;
+    height      : 68px;
+}
+.hisWord {
+    position    : relative;
+    width       : 100%;
+    height      : 54px;
+    margin-top  : 10px;
+    float       : left;
+}
+.hisHead {
+    position        : absolute;
+    left            : 24px;
+    top             : 5px;
+    width           : 44px;
+    height          : 44px;
+    border-radius   : 3px;
+}
+.heSay {
+    position        : absolute;
+    left            : 90px;
+    top             : 7px;
+    padding         : 9px 10px;
+    background      : #fff;
+    color           : #4b5877;
+    font-size       : 14px;
+    border          : 1px solid #d7d7d7;
+    border-radius   : 3px;
+}
+.myWord {
+    position    : relative;
+    width       : 100%;
+    height      : 54px;
+    margin-top  : 10px;
+    float       : right;
+}
+.myHead {
+    position        : absolute;
+    right           : 24px;
+    top             : 5px;
+    width           : 44px;
+    height          : 44px;
+    border-radius   : 3px;
+}
+.ISay {
+    position        : absolute;
+    right           : 90px;
+    top             : 7px;
+    padding         : 9px 10px;
+    background      : #8caac7;
+    color           : #fff;
+    font-size       : 14px;
+    border          : 1px solid #d7d7d7;
+    border-radius   : 3px;
+}
+.time {
+    color       : #8c97b2;
+    font-size   : 12px;
+    text-align  : center;
+}
+.dialog-function {
+    position    : relative;
+    width       : 100%;
+    height      : 36px;
+    background  : #dde0e6;
+}
+.sendfile {
+    padding     : 0 4px;
+    margin      : 6px 0 0 20px;
+    float       : left;
+}
+.sendfile img {
+    padding : 2px;
+}
+.sendfile img:active {
+    background : #fff;
+}
+.dialog-enter {
+    width       : 631px;
+    height      : 138px;
+    background  : #fff;
+    font-size   : 16px;
+    border      : 0;
+    outline     : none;
+}
+.dialog-send {
+    position                : absolute;
+    right                   : 8px;
+    bottom                  : 3px;
+    width                   : 80px;
+    height                  : 34px;
+    background              : #fff;
+    color                   : #596686;
+    font-size               : 16px;
+    border                  : 1px solid #b5b5b5;
+    outline                 : none;
+    -webkit-border-radius   : 3px;
+       -moz-border-radius   : 3px;
+            border-radius   : 3px;
+}
+.dialog-send:active {
+    background  : #f3e8fc;
+}
